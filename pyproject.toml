@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llm-toolkit"
+version = "0.1.0"
+description = "Unified local toolkit for Anthropic, OpenAI, and Gemini."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "llm-toolkit contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+providers = [
+  "anthropic>=0.40.0",
+  "openai>=1.52.0",
+  "google-genai>=0.8.0",
+]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+llm-toolkit = "llm_toolkit.cli:main"
+
+[tool.uv]
+dev-dependencies = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
