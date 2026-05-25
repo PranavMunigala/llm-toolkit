@@ -1,30 +1,51 @@
 # llm-toolkit
 
-A toolkit to accelerate work with large language models (LLMs).
+Local Python package for querying Anthropic, OpenAI, and Gemini behind one interface.
 
-## Features
-- Plug-and-play components for prompt engineering, data processing, and evaluation
-- Modular design for easy customization and integration
-- Documentation and sample usage for quick start
+## Installation
 
-## Getting Started
-1. Clone the repository
-   ```bash
-   git clone https://github.com/PranavMunigala/llm-toolkit.git
-   ```
-2. Install dependencies (update this section as appropriate for your environment)
-   ```bash
-   # Example for Python:
-   pip install -r requirements.txt
-   ```
+```bash
+uv sync
+```
 
-## Usage
-- Import and use toolkit components in your own LLM workflows
-- See example scripts in the `examples/` directory
+Or with pip:
 
-## Contributing
-Contributions are welcome!
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+```bash
+pip install -e ".[providers]"
+```
 
-## License
-[MIT](LICENSE)
+## Environment
+
+Copy the example file and set API keys:
+
+```bash
+cp .env.example .env
+```
+
+## CLI Usage
+
+Single provider:
+
+```bash
+llm-toolkit "Explain retrieval augmented generation" --provider gpt --stream
+```
+
+All providers:
+
+```bash
+llm-toolkit "Summarize transformer attention in 2 bullets" --all
+```
+
+## Python Usage
+
+```python
+from llm_toolkit import ask
+
+response = ask("Hello!", provider="gpt", model="gpt-4o-mini")
+print(response.text)
+print(response.usage)
+```
+
+## Terminal Screenshot
+
+_Add screenshot here_
