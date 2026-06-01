@@ -1,3 +1,5 @@
+# CLI entry point for llm-toolkit, providing a unified interface to interact with multiple LLM providers.
+
 from __future__ import annotations
 
 import argparse

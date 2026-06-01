@@ -1,3 +1,5 @@
+# Core logic for llm-toolkit, including the main ask function and cost calculation utilities.
+
 from __future__ import annotations
 
 from time import perf_counter

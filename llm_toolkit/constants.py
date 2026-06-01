@@ -1,3 +1,5 @@
+# Constants for llm-toolkit, including model pricing information and other shared constants.
+
 PRICES = {
     "claude-3-5-haiku-latest": {"input_per_million_usd": 1.00, "output_per_million_usd": 5.00},
     "claude-3-5-sonnet-latest": {"input_per_million_usd": 3.00, "output_per_million_usd": 15.00},

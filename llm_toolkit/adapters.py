@@ -1,3 +1,6 @@
+# Adapters for different LLM providers (Anthropic, OpenAI, Gemini).
+
+
 from __future__ import annotations
 
 import os
