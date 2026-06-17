@@ -9,9 +9,9 @@ from .adapters import AdapterError, Message, Response, Usage, ask_anthropic, ask
 from .constants import PRICES
 
 DEFAULT_MODELS = {
-    "claude": "claude-3-5-haiku-latest",
+    "claude": "claude-4-5-haiku-latest",
     "gpt": "gpt-4o-mini",
-    "gemini": "gemini-1.5-flash",
+    "gemini": "gemini-3.5-flash",
 }
 
 
